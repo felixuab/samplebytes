@@ -1,8 +1,8 @@
+/*Codigo para Validar Usuario*/
 $('#formLogin').submit(function(e){
    e.preventDefault();
    var usuario = $.trim($("#usuario").val());    
    var password =$.trim($("#password").val());    
-    
    if(usuario.length == "" || password == ""){
       Swal.fire({
           type:'warning',
@@ -29,7 +29,6 @@ $('#formLogin').submit(function(e){
                        confirmButtonText:'Ingresar'
                    }).then((result) => {
                        if(result.value){
-                           //window.location.href = "vistas/pag_inicio.php";
                            window.location.href = "dashboard/index.php";
                        }
                    })
@@ -39,3 +38,4 @@ $('#formLogin').submit(function(e){
         });
     }     
 });
+/*Realizado por Franz */
